@@ -10,6 +10,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 
+import com.main.methods.DrawMap;
 import com.main.methods.DrawSquare;
 
 public class TowerDefense {	
@@ -27,12 +28,12 @@ public class TowerDefense {
 	glOrtho(0, 600, 400, 0, 1, -1);
 	glMatrixMode(GL_MODELVIEW);
 	
+	
+	
 	while (!Display.isCloseRequested()) {
-		DrawSquare vierkant = new DrawSquare(100,100);
-		DrawSquare vierkant2 = new DrawSquare(100,150);
-		
 		Display.update();
 		Display.sync(60);
+		DrawMap map = new DrawMap();
 	}
 	Display.destroy();
 	
