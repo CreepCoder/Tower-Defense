@@ -15,9 +15,9 @@ import org.lwjgl.opengl.DisplayMode;
 public class Session {
 public static void BeginSession() {
 	Display.setTitle("Tower Defense");
+	Display.setResizable(true);
 	try {
-		Display.setDisplayMode(new DisplayMode(1024, 600));
-		Display.setResizable(true);
+		Display.setDisplayMode(new DisplayMode(600, 400));
 		Display.create();
 	} catch (LWJGLException e) {
 		e.printStackTrace();
@@ -25,7 +25,7 @@ public static void BeginSession() {
 	
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0, 1200, 800, 0, 1, -1);
+	glOrtho(0, 600, 400, 0, 1, -1);
 	glMatrixMode(GL_MODELVIEW);
 	glEnable(GL_TEXTURE_2D);
 	}
