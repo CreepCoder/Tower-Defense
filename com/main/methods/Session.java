@@ -16,7 +16,8 @@ public class Session {
 public static void BeginSession() {
 	Display.setTitle("Tower Defense");
 	try {
-		Display.setDisplayMode(new DisplayMode(1200, 800));
+		Display.setDisplayMode(new DisplayMode(1024, 600));
+		Display.setResizable(true);
 		Display.create();
 	} catch (LWJGLException e) {
 		e.printStackTrace();
