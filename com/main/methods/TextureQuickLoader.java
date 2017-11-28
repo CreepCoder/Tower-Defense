@@ -7,10 +7,11 @@ import org.newdawn.slick.opengl.Texture;
 import org.newdawn.slick.opengl.TextureLoader;
 import org.newdawn.slick.util.ResourceLoader;
 
-public class DrawTexture {
+public class TextureQuickLoader {
+	
 	public static Texture LoadTexture(String path, String filetype) {
 		Texture texture = null;
-		InputStream in = ResourceLoader.getResourceAsStream(path);
+		InputStream in = ResourceLoader.getResourceAsStream("/src/assets/tiles/" + path);
 		try {
 			texture = TextureLoader.getTexture(filetype, in);
 		} catch (IOException e) {
