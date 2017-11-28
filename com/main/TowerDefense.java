@@ -15,12 +15,9 @@ public class TowerDefense {
 		
 	Session.BeginSession();
 	//Tile grass = new Tile(0, 0, 50, 50, TileType.Grass);
-	Texture tex = TextureQuickLoader.LoadTexture("grass.png", "PNG");
 	
 	while (!Display.isCloseRequested()) {
-		//DrawMap.Map();
-		DrawSquare.DrawSquareTexture(0, 0, 64, 64, tex);
-		DrawSquare.DrawSquareTexture(64, 64, 64, 64, tex);
+		DrawMap.Map();
 		
 		Display.update();
 		Display.sync(60);

@@ -17,7 +17,7 @@ public static void BeginSession() {
 	Display.setTitle("Tower Defense");
 	Display.setResizable(true);
 	try {
-		Display.setDisplayMode(new DisplayMode(600, 400));
+		Display.setDisplayMode(new DisplayMode(1024, 640));
 		Display.create();
 	} catch (LWJGLException e) {
 		e.printStackTrace();
@@ -25,7 +25,7 @@ public static void BeginSession() {
 	
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0, 600, 400, 0, 1, -1);
+	glOrtho(0, 1024, 640, 0, 1, -1);
 	glMatrixMode(GL_MODELVIEW);
 	glEnable(GL_TEXTURE_2D);
 	}
