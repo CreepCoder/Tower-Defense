@@ -5,7 +5,7 @@ import static org.lwjgl.opengl.GL11.*;
 import org.newdawn.slick.opengl.Texture;
 
 public class DrawSquare {
-	public static void DrawSquare(float x, float y, float width, float height) {
+	public static void drawSquare(float x, float y, float width, float height) {
 		glBegin(GL_QUADS);
 		glVertex2f(x, y);
 		glVertex2f(x + width, y);
@@ -14,7 +14,7 @@ public class DrawSquare {
 		glEnd();
 	}
 	
-	public static void DrawSquareTexture(float x, float y, float width, float height, Texture texture) {
+	public static void drawSquareTexture(float x, float y, float width, float height, Texture texture) {
 		texture.bind();
 		glTranslatef(x, y, 0);
 		glBegin(GL_QUADS);

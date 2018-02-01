@@ -1,8 +1,8 @@
-package com.main.tiles;
+package com.tiles;
 
 public enum TileType {
 	
-	Grass("grass.png", true), Dirt("dirt.png", false);
+	Grass("tiles/grass.png", true), Dirt("tiles/dirt.png", false), Water("tiles/water.png", false);
 	
 	String textureName;
 	boolean buildable;
